@@ -1,0 +1,279 @@
+.heroWrapper {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #ffffff 30%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.card {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  box-shadow: var(--glass-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary), var(--accent));
+}
+
+.cardLive {
+  border-color: rgba(255, 51, 102, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(255, 51, 102, 0.1);
+}
+
+.cardLive::before {
+  background: linear-gradient(90deg, var(--accent-red), #ff7e5f, var(--accent-red));
+}
+
+.matchHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.matchBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.teamFlag {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.team:hover .teamFlag {
+  transform: scale(1.1);
+}
+
+.teamName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.teamCode {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.scoreArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+}
+
+.score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scoreLive {
+  background: linear-gradient(180deg, #fff 0%, var(--accent-red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vs {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.matchTime {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.matchTimeLive {
+  color: var(--accent-red);
+}
+
+.countdown {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.countdownUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.85rem;
+  border-radius: 12px;
+  min-width: 65px;
+}
+
+.countdownVal {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+}
+
+.countdownLbl {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.matchFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  padding-top: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.venue {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.city {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .heroWrapper {
+    padding: 2.5rem 0 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card {
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+  }
+  
+  .teamFlag {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .teamFlag span {
+    font-size: 1.25rem;
+  }
+  
+  .teamName {
+    font-size: 0.95rem;
+  }
+  
+  .score {
+    font-size: 2.25rem;
+  }
+  
+  .scoreArea {
+    min-width: 90px;
+  }
+  
+  .countdown {
+    gap: 0.5rem;
+  }
+  
+  .countdownUnit {
+    padding: 0.4rem 0.5rem;
+    min-width: 50px;
+  }
+  
+  .countdownVal {
+    font-size: 1.1rem;
+  }
+  
+  .countdownLbl {
+    font-size: 0.6rem;
+  }
+  
+  .matchTime {
+    font-size: 0.95rem;
+  }
+}
