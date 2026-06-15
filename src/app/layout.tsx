@@ -1,16 +1,15 @@
-import type { Metadata, Viewport } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: '২০২৬ ফিফা বিশ্বকাপ সময়সূচী | বাংলাদেশ সময় (BDT) অনুযায়ী লাইভ ম্যাচ',
-  description: '২০২৬ ফিফা ফুটবল বিশ্বকাপের সম্পূর্ণ সময়সূচী বাংলাদেশ সময় (BDT) অনুযায়ী দেখুন। লাইভ ম্যাচ স্কোর, গ্রুপ টেবিল স্ট্যান্ডিংস এবং নকআউট পর্বের গতিশীল আপডেট।',
-  keywords: ['ফিফা বিশ্বকাপ ২০২৬', 'বিশ্বকাপ সময়সূচী ২০২৬', 'বাংলাদেশ সময় বিশ্বকাপ', 'BDT world cup schedule', 'FIFA World Cup 2026 BDT'],
-  authors: [{ name: 'Antigravity' }]
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1
+  title: "World Cup 2026 Time | BD Time Schedule",
+  description: "FIFA World Cup 2026 match schedule in Bangladesh Time (BST). Live hero, groups, full schedule, and knockout rounds.",
+  keywords: "World Cup 2026, FIFA World Cup, BD Time, Bangladesh Time, Football Schedule, WC 2026",
+  openGraph: {
+    title: "World Cup 2026 Time | BD Time Schedule",
+    description: "All World Cup 2026 matches in Bangladesh Time (BST).",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bn">
-      <body>{children}</body>
+      <body className="antialiased">
+        {children}
+      </body>
     </html>
   );
 }
